@@ -76,3 +76,9 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.no-focus-border:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}

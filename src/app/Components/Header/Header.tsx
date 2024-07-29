@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Input } from "@/components/ui/input";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -33,9 +35,9 @@ const ListItem = ({ href, title, children }) => (
 function Header() {
   return (
     <>
-      <nav className=" flex justify-between items-center p-4">
+      <nav className=" flex justify-between items-center p-4 py-7">
         <div className="  flex items-center justify-center">
-          <p className='roboto-bold text-xl font-medium '>ArchiVision</p>
+          <p className="roboto-bold text-xl font-medium ">ArchiVision</p>
           <div className=" ml-6  md:ml-16">
             <NavigationMenu>
               <NavigationMenuList>
@@ -80,12 +82,26 @@ function Header() {
           </div>
         </div>
         <div className="flex items-center justify-center space-x-4 ">
-          <Button className=" px-7 border-black border-2 text-black bg-transparent hover:bg-slate-300" asChild>
-            <Link href="/login">Sign Up</Link>
-          </Button>
-          <Button className='px-7' asChild>
-            <Link href="/login">Sign In</Link>
-          </Button>
+          <Input
+            type="text"
+            placeholder="Search for projects.."
+            className="text-[13px] rounded-xl bg-[#EBEBEB] border-none text-black pr-10 no-focus-border"
+          />
+          <div className="flex justify-center items-center">
+            <Button
+              className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-slate-300"
+              asChild
+            >
+              <Link href="/login" className="font-semibold text-[13px] ">
+                Sign Up
+              </Link>
+            </Button>
+            <Button className="px-8  rounded-xl " asChild>
+              <Link href="/login" className="font-semibold text-[13px] ">
+                Sign In
+              </Link>
+            </Button>
+          </div>
         </div>
       </nav>
     </>
