@@ -1,8 +1,14 @@
-import React, {ReactNode} from "react";
+"use client";
+
+import React, { ReactNode, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import img1 from '../../../../public/img2.jpg'
+import interieur from "../../../../public/interieur.jpg";
+import Industrial from "../../../../public/industrial.jpg";
+import landScape from "../../../../public/landscape.jpg";
+import homeDesign from "../../../../public/home-design.jpg";
+import commercial from "../../../../public/offices.jpg";
 
 import {
   NavigationMenu,
@@ -30,17 +36,38 @@ interface ListItemProps {
   children: ReactNode;
 }
 
-
-const ListItem: React.FC<ListItemProps> = ({ href, title, children }) => (
+const ListItem: React.FC<ListItemProps> = ({
+  href,
+  title,
+  children,
+  onMouseEnter,
+  onMouseLeave,
+}) => (
   <li>
-    <a href={href} className="flex flex-col p-3 hover:bg-gray-100 rounded-md">
-      <div className="text-lg font-medium">{title}</div>
-      <p className="text-sm">{children}</p>
+    <a
+      href={href}
+      className="flex flex-col p-3 hover:bg-gray-100 rounded-md"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <div className="text-base font-medium">{title}</div>
+      <p className="text-xs">{children}</p>
     </a>
   </li>
 );
 
 function Header() {
+  const [currentImage, setCurrentImage] = useState(interieur.src);
+
+  const handelMouseEnter = (img) => {
+    setCurrentImage(img.src);
+  };
+
+  const handelMouseLeave = () => {
+
+    setCurrentImage(currentImage);
+  };
+
   return (
     <>
       <nav className=" flex justify-between items-center p-4 py-7">
@@ -52,40 +79,61 @@ function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Discover</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul  className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[800px] lg:grid-cols-3">
                       <li className="row-span-3 ">
-                        
                         <NavigationMenuLink asChild>
-                          <a
+                          <div
                             className="flex h-full w-full select-none flex-col justify-end rounded-md  from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href="/"
-                            style={{ 
-                              backgroundImage: "url('/img2.jpg')", 
-                              backgroundSize: 'cover', 
-                              backgroundPosition: 'center' 
-                            }}                          >
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              shadcn/ui
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              Beautifully designed components built with Radix
-                              UI and Tailwind CSS.
-                            </p>
-                          </a>
+                            style={{
+                              backgroundImage: `url(${currentImage})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                            }}
+                          ></div>
                         </NavigationMenuLink>
                       </li>
-                      <ListItem href="/docs" title="Introduction">
+                      <ListItem
+                        href="/docs"
+                        title="interieur"
+                        onMouseEnter={() => handelMouseEnter(interieur)}
+                        onMouseLeave={handelMouseLeave}
+                      >
                         Re-usable components built using Radix UI and Tailwind
                         CSS.
                       </ListItem>
-                      <ListItem href="/docs/installation" title="Installation">
+                      <ListItem
+                        href="/docs/installation"
+                        title="Landscape & Urbanism"
+                        onMouseEnter={() => handelMouseEnter(landScape)}
+                      >
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
                         href="/docs/primitives/typography"
-                        title="Typography"
+                        title="Commencial & offices"
+                        onMouseEnter={() => handelMouseEnter(commercial)}
+                        onMouseLeave={handelMouseLeave}
                       >
                         Styles for headings, paragraphs, lists...etc
+                      </ListItem>
+                      <ListItem
+                        href="/docs"
+                        title="Industrial & Infrastructure"
+                        onMouseEnter={() => handelMouseEnter(Industrial)}
+                        onMouseLeave={handelMouseLeave}
+                      >
+                        Re-usable components built using Radix UI and Tailwind
+                        CSS.
+                      </ListItem>
+                      <ListItem
+                        href="/docs/installation"
+                        title="Residental"
+                        onMouseEnter={() =>
+                          handelMouseEnter(homeDesign)
+                        }
+                        onMouseLeave={handelMouseLeave}
+                      >
+                        How to install dependencies and structure your app.
                       </ListItem>
                     </ul>
                   </NavigationMenuContent>
@@ -102,7 +150,7 @@ function Header() {
           />
           <div className="flex justify-center items-center">
             <Button
-              className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-slate-300"
+              className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
               asChild
             >
               <Link href="/login" className="font-semibold text-[13px] ">
