@@ -99,7 +99,7 @@ function Header() {
                       <ListItem
                         href="/docs"
                         title="interieur"
-                        onMouseEnter={() => handelMouseEnter(interieur)}
+                        onMouseEnter={() => handelMouseEnter(interieur.src)}
                         onMouseLeave={handelMouseLeave}
                       >
                         Re-usable components built using Radix UI and Tailwind
