@@ -64,7 +64,7 @@ function Header() {
   const [currentImage, setCurrentImage] = useState<string>(interieur.src);
 
   const handelMouseEnter = (img: string) => {
-    setCurrentImage(img.src);
+    setCurrentImage(img);
   };
 
   const handelMouseLeave = () => {
@@ -108,14 +108,14 @@ function Header() {
                       <ListItem
                         href="/docs/installation"
                         title="Landscape & Urbanism"
-                        onMouseEnter={() => handelMouseEnter(landScape)}
+                        onMouseEnter={() => handelMouseEnter(landScape.src)}
                       >
                         How to install dependencies and structure your app.
                       </ListItem>
                       <ListItem
                         href="/docs/primitives/typography"
                         title="Commencial & offices"
-                        onMouseEnter={() => handelMouseEnter(commercial)}
+                        onMouseEnter={() => handelMouseEnter(commercial.src)}
                         onMouseLeave={handelMouseLeave}
                       >
                         Styles for headings, paragraphs, lists...etc
@@ -123,7 +123,7 @@ function Header() {
                       <ListItem
                         href="/docs"
                         title="Industrial & Infrastructure"
-                        onMouseEnter={() => handelMouseEnter(Industrial)}
+                        onMouseEnter={() => handelMouseEnter(Industrial.src)}
                         onMouseLeave={handelMouseLeave}
                       >
                         Re-usable components built using Radix UI and Tailwind
@@ -133,7 +133,7 @@ function Header() {
                         href="/docs/installation"
                         title="Residental"
                         onMouseEnter={() =>
-                          handelMouseEnter(homeDesign)
+                          handelMouseEnter(homeDesign.src)
                         }
                         onMouseLeave={handelMouseLeave}
                       >
