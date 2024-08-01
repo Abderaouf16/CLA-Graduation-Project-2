@@ -61,9 +61,9 @@ const ListItem: React.FC<ListItemProps> = ({
 );
 
 function Header() {
-  const [currentImage, setCurrentImage] = useState(interieur.src);
+  const [currentImage, setCurrentImage] = useState<string>(interieur.src);
 
-  const handelMouseEnter = (img) => {
+  const handelMouseEnter = (img: string) => {
     setCurrentImage(img.src);
   };
 
