@@ -30,10 +30,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+
+
 interface ListItemProps {
   href: string;
   title: string;
   children: ReactNode;
+  onMouseEnter?: ()=> void;
+  onMouseLeave?: () => void;
 }
 
 const ListItem: React.FC<ListItemProps> = ({
