@@ -82,3 +82,8 @@
   box-shadow: none !important;
   border: none !important;
 }
+
+.blurContainer{
+  backdrop-filter: blur(25px);
+  background-color: rgba(141, 141, 135, 0.2);
+}
