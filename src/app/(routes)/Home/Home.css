@@ -1,12 +1,9 @@
-
-
-
-.heroPofileImg{
-    background-image: url(/heroImg.jpg);
-            background-size : "cover";
-            background-position : "center";
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+.heroPofileImg {
+  background-image: url(/abdouImg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px white solid;
 }
-
