@@ -74,7 +74,7 @@ function Header() {
 
   return (
     <>
-      <nav className="  fixed top-0 right-0 left-0 z-50   flex justify-between items-center px-4 md:px-6 xl:px-14 py-5   ">
+      <nav className="  fixed top-0 right-0 left-0 z-50   flex justify-between items-center px-4 md:px-6 xl:px-14 py-5 bg-white  ">
         <div className="  flex items-center justify-center">
           <p className="roboto-bold text-xl font-medium ">ArchiVision</p>
           <div className=" ml-6  md:ml-16">

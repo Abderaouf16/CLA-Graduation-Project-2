@@ -1,10 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
 import "./Home.css";
+import bars from "../../../../public/bars-solid.svg";
+import Image from "next/image";
+
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+
 function Page() {
+  const buttons = [
+    "interieur",
+    "Landscape & Urbanism",
+    "Commencial & offices",
+    "Industrial & Infrastructure",
+    "Residental",
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <>
-        <Header />
+      <Header />
       <div className="px-4 md:px-6 xl:px-14 py-16 ">
         <div
           className="bg-slate-400 w-full h-[550px] rounded-2xl my-10  relative"
@@ -37,6 +62,46 @@ function Page() {
             </div>
           </div>
         </div>
+
+        <section>
+        <div className=" h-16 flex  items-center   ">
+          {buttons.map((text, index) => (
+            <button
+              key={index}
+              className={` ${
+                activeIndex === index ? "bg-[#EBEBEB]" : "bg-white"
+              } px-7 mx-2 text-sm font-medium cursor-pointer rounded-xl border-2 border-[#EBEBEB]  py-5 h-10 flex justify-center items-center  `}
+              onClick={() => setActiveIndex(index)}
+            >
+              {text}
+            </button>
+          ))}
+          <div className="  ml-auto">
+            <Menubar className="rounded-xl border-2 border-[#EBEBEB]  cursor-pointer">
+              <MenubarMenu className=''>
+                <MenubarTrigger className=' cursor-pointer'>
+                  <Image
+                    src="/bars-solid.svg"
+                    alt="Menu Icon"
+                    width={15}
+                    height={5}
+                  />
+                </MenubarTrigger>
+                <MenubarContent>
+                  <MenubarItem>
+                    New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+                  </MenubarItem>
+                  <MenubarItem>New Window</MenubarItem>
+                  <MenubarSeparator />
+                  <MenubarItem>Share</MenubarItem>
+                  <MenubarSeparator />
+                  <MenubarItem>Print</MenubarItem>
+                </MenubarContent>
+              </MenubarMenu>
+            </Menubar>{" "}
+          </div>
+        </div>
+        </section>
       </div>
     </>
   );
