@@ -187,7 +187,7 @@ function Header() {
             </Button>
           </div>
           <div className="humberger  flex justify-center items-center   cursor-pointer">
-            <Sheet className="z-50  ">
+            <Sheet >
               <SheetTrigger className="   p-2 border-[#EBEBEB] border-2 rounded-xl   hover:bg-[#EBEBEB]">
                 <img
                   src="/bars-solid.svg"
