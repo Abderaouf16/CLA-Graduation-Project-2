@@ -17,6 +17,9 @@ import {
 } from "@/components/ui/menubar";
 
 function Page() {
+
+//  Filters
+const [activeIndex, setActiveIndex] = useState <number | null>(0);
   const buttons = [
     "interieur",
     "Landscape & Urbanism",
@@ -25,7 +28,9 @@ function Page() {
     "Residental",
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null);
+
+
+
 
   return (
     <>
@@ -64,21 +69,25 @@ function Page() {
         </div>
 
         <section>
-        <div className=" h-16 flex  items-center   ">
+        <div className=" h-16 flex      ">
+          <div className=" flex-1 flex items-center flex-wrap">
           {buttons.map((text, index) => (
             <button
               key={index}
               className={` ${
                 activeIndex === index ? "bg-[#EBEBEB]" : "bg-white"
-              } px-7 mx-2 text-sm font-medium cursor-pointer rounded-xl border-2 border-[#EBEBEB]  py-5 h-10 flex justify-center items-center  `}
+              } px-7 mx-2 text-sm font-medium cursor-pointer rounded-xl border-2 border-[#EBEBEB]  py-5 h-10 flex justify-center items-center my-2  `}
               onClick={() => setActiveIndex(index)}
             >
               {text}
             </button>
           ))}
-          <div className="  ml-auto">
+
+          </div>
+         
+          <div className="   flex ">
             <Menubar className="rounded-xl border-2 border-[#EBEBEB]  cursor-pointer">
-              <MenubarMenu className=''>
+              <MenubarMenu >
                 <MenubarTrigger className=' cursor-pointer'>
                   <Image
                     src="/bars-solid.svg"
@@ -100,7 +109,8 @@ function Page() {
               </MenubarMenu>
             </Menubar>{" "}
           </div>
-        </div>
+          </div>
+
         </section>
       </div>
     </>

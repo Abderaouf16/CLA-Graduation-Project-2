@@ -9,6 +9,7 @@ import Industrial from "../../../../public/industrial.jpg";
 import landScape from "../../../../public/landscape.jpg";
 import homeDesign from "../../../../public/home-design.jpg";
 import commercial from "../../../../public/offices.jpg";
+import bars from "../../../../public/bars-solid.svg";
 
 import {
   NavigationMenu,
@@ -30,13 +31,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-
+// toggle
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 interface ListItemProps {
   href: string;
   title: string;
   children: ReactNode;
-  onMouseEnter?: ()=> void;
+  onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 }
 
@@ -68,9 +77,15 @@ function Header() {
   };
 
   const handelMouseLeave = () => {
-
     setCurrentImage(currentImage);
   };
+
+  //toggle mobile view
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  function toggleMobileMenu() {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  }
 
   return (
     <>
@@ -132,9 +147,7 @@ function Header() {
                       <ListItem
                         href="/docs/installation"
                         title="Residental"
-                        onMouseEnter={() =>
-                          handelMouseEnter(homeDesign.src)
-                        }
+                        onMouseEnter={() => handelMouseEnter(homeDesign.src)}
                         onMouseLeave={handelMouseLeave}
                       >
                         How to install dependencies and structure your app.
@@ -146,13 +159,18 @@ function Header() {
             </NavigationMenu>
           </div>
         </div>
+
         <div className="flex items-center justify-center space-x-4 ">
           <Input
             type="text"
             placeholder="Search for projects.."
             className="text-[13px] rounded-xl bg-[#EBEBEB] border-none text-black pr-10 no-focus-border"
           />
-          <div className="flex justify-center items-center">
+          <div
+            className={`${
+              isMobileMenuOpen ? "mobileView" : ""
+            } memberShip flex justify-center items-center  `}
+          >
             <Button
               className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
               asChild
@@ -166,6 +184,29 @@ function Header() {
                 Sign In
               </Link>
             </Button>
+
+            <div className="humberger">
+
+              <Sheet className='z-50'>
+                <SheetTrigger>
+                <img
+              src="/bars-solid.svg"
+              className="w-8 cursor-pointer mr-3"
+              onClick={toggleMobileMenu}
+              alt=""
+            /> 
+                </SheetTrigger>
+                <SheetContent>
+                  <SheetHeader>
+                    <SheetTitle>Are you absolutely sure?</SheetTitle>
+                    <SheetDescription>
+                      This action cannot be undone. This will permanently delete
+                      your account and remove your data from our servers.
+                    </SheetDescription>
+                  </SheetHeader>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </nav>
