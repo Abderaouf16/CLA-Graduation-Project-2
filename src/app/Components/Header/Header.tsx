@@ -10,6 +10,7 @@ import landScape from "../../../../public/landscape.jpg";
 import homeDesign from "../../../../public/home-design.jpg";
 import commercial from "../../../../public/offices.jpg";
 import bars from "../../../../public/bars-solid.svg";
+import "./Header.css";
 
 import {
   NavigationMenu,
@@ -93,7 +94,7 @@ function Header() {
         <div className="  flex items-center justify-center">
           <p className="roboto-bold text-xl font-medium ">ArchiVision</p>
           <div className=" ml-6  md:ml-16">
-            <NavigationMenu>
+            <NavigationMenu className="discover">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Discover</NavigationMenuTrigger>
@@ -184,29 +185,50 @@ function Header() {
                 Sign In
               </Link>
             </Button>
-
-            <div className="humberger">
-
-              <Sheet className='z-50'>
-                <SheetTrigger>
+          </div>
+          <div className="humberger  flex justify-center items-center   cursor-pointer">
+            <Sheet className="z-50  ">
+              <SheetTrigger className="   p-2 border-[#EBEBEB] border-2 rounded-xl   hover:bg-[#EBEBEB]">
                 <img
-              src="/bars-solid.svg"
-              className="w-8 cursor-pointer mr-3"
-              onClick={toggleMobileMenu}
-              alt=""
-            /> 
-                </SheetTrigger>
-                <SheetContent>
-                  <SheetHeader>
-                    <SheetTitle>Are you absolutely sure?</SheetTitle>
-                    <SheetDescription>
-                      This action cannot be undone. This will permanently delete
-                      your account and remove your data from our servers.
-                    </SheetDescription>
-                  </SheetHeader>
-                </SheetContent>
-              </Sheet>
-            </div>
+                  src="/bars-solid.svg"
+                  className="w-7 cursor-pointer "
+                  onClick={toggleMobileMenu}
+                  alt=""
+                />
+              </SheetTrigger>
+              <SheetContent className="rounded-xl">
+                <SheetHeader>
+                  <SheetTitle></SheetTitle>
+                  <SheetDescription>
+                    <div className="mt-7">
+                      <Button
+                        className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
+                        asChild
+                      >
+                        <Link
+                          href="/login"
+                          className="font-semibold text-[13px] "
+                        >
+                          Sign Up
+                        </Link>
+                      </Button>
+                      <Button className="px-8  rounded-xl " asChild>
+                        <Link
+                          href="/login"
+                          className="font-semibold text-[13px] "
+                        >
+                          Sign In
+                        </Link>
+                      </Button>
+                    </div>
+
+                    <div className="">
+                      
+                    </div>
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </nav>

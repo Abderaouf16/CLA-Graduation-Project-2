@@ -3,6 +3,16 @@
 
 @media (max-width : 600px) {
     .memberShip{
-        
+        display: none;
+        opacity: 0;
+    }
+    .discover{
+        display: none;
     }
 }
+
+@media (min-width: 600px) and (max-width: 850px) {
+    .discover{
+        display: none;
+    }
+  }
