@@ -92,7 +92,7 @@ function Header() {
     <>
       <nav className="  fixed top-0 right-0 left-0 z-50   flex justify-between items-center px-4 md:px-6 xl:px-14 py-5 bg-white  ">
         <div className="  flex items-center justify-center">
-          <p className="roboto-bold text-xl font-medium ">ArchiVision</p>
+          <p className="roboto-bold text-lg md:text-xl font-medium ">ArchiVision</p>
           <div className=" ml-6  md:ml-16">
             <NavigationMenu className="discover">
               <NavigationMenuList>
@@ -161,11 +161,11 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center space-x-4 ">
+        <div className="flex items-center justify-center space-x-4  ">
           <Input
             type="text"
             placeholder="Search for projects.."
-            className="text-[13px] rounded-xl bg-[#EBEBEB] border-none text-black pr-10 no-focus-border"
+            className=" text-xs md:text-[13px] rounded-xl bg-[#EBEBEB] border-none text-black  no-focus-border"
           />
           <div
             className={`${

@@ -44,23 +44,23 @@ const [activeIndex, setActiveIndex] = useState <number | null>(0);
             backgroundPosition: "center",
           }}
         >
-          <div className="blurContainer bg-slate-500  w-[370px]  rounded-2xl  absolute bottom-0 left-0 m-5 py-3 px-5">
+          <div className="blurContainer bg-slate-500   md:w-[370px]   rounded-2xl  absolute bottom-0 left-0 m-5 py-3 px-5">
             <div className="  flex ">
               <div className="heroPofileImg"></div>
               <div className=" mx-3 ">
-                <h1 className=" text-sm text-white font-semibold ">
+                <h1 className=" text-xs md:text-sm text-white font-semibold ">
                   Anderson chavvaria
                 </h1>
-                <p className="textGrey  text-xs font-base">@andrs</p>
+                <p className="textGrey  text-xs  font-base">@andrs</p>
               </div>
             </div>
             <div className="  my-2">
-              <h1 className="text-white text-xl font-semibold">
+              <h1 className="text-white text-lg md:text-xl font-semibold">
                 Modern luxury living space revealed
               </h1>
             </div>
             <div className=" my-2">
-              <p className="text-xs textGrey">
+              <p className=" text-xs md:text-xs textGrey">
                 Discover the epitome of luxury living in this modern space.
                 Elegance meets comfort with hight ceiling, natural light
               </p>
@@ -76,7 +76,7 @@ const [activeIndex, setActiveIndex] = useState <number | null>(0);
               key={index}
               className={` ${
                 activeIndex === index ? "bg-[#EBEBEB]" : "bg-white"
-              } px-7 mx-2 text-sm font-medium cursor-pointer rounded-xl border-2 border-[#EBEBEB]  py-5 h-10 flex justify-center items-center my-2  `}
+              } px-7 mx-2 text-xs md:text-sm font-medium cursor-pointer rounded-xl border-2 border-[#EBEBEB]  py-5 h-10 flex justify-center items-center my-2  `}
               onClick={() => setActiveIndex(index)}
             >
               {text}
