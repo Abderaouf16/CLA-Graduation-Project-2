@@ -12,6 +12,11 @@
   height: 100%;
   background-size: contain;
   background-position: center;
+ transition: 0.3s ease-in-out;
+
+}
+.img:hover{
+  filter: blur( 5px);
 }
 
 
@@ -58,6 +63,14 @@
 @media (max-width: 600px) {
   .column {
     flex: 100%;
-    max-width: 100%;
+    max-width: 90%;
+   
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
   }
 }

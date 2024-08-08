@@ -63,7 +63,7 @@ function Page() {
         </div>
 
         <section>
-          <div className="h-16 flex">
+          <div className=" flex mb-5">
             <div className="flex-1 flex items-center flex-wrap">
               {buttons.map((text, index) => (
                 <button
@@ -106,7 +106,9 @@ function Page() {
 
           <div className="row my-10">
             <div className="column">
-            <div  className=" w-full h-[220px] sm:h-[220px]  bg-red-400">  <img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" p-2 bg-red">
+            <div  className=" h-[280px] sm:h-[220px]  bg-red-400  ">  <img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> </div>
+              </div>
               <div className=" w-full h-[350px] sm:h-[460px] bg-blue-400 ">  <img className='img' src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> </div>
               <div className=" w-full h-[280px] sm:h-[230px]  bg-slate-300 ">  <img className='img' src="https://www.w3schools.com/w3images/falls2.jpg" style={{ width: "100%" }} /> </div>
               <div className=" w-full h-[330px] sm:h-[280px]  bg-slate-500">  <img  className='img' src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> </div>
