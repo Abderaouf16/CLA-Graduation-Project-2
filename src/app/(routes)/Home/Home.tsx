@@ -104,47 +104,47 @@ function Page() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row my-10">
             <div className="column">
-            <img src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/falls2.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/nature.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/mist.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> 
+            <div  className=" w-full h-[220px] sm:h-[220px]  bg-red-400">  <img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[350px] sm:h-[460px] bg-blue-400 ">  <img className='img' src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[280px] sm:h-[230px]  bg-slate-300 ">  <img className='img' src="https://www.w3schools.com/w3images/falls2.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[330px] sm:h-[280px]  bg-slate-500">  <img  className='img' src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[300px] sm:h-[350px]   bg-green-400">  <img className='img' src="https://www.w3schools.com/w3images/nature.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[310px] sm:h-[260px]   bg-yellow-300">  <img className='img'  src="https://www.w3schools.com/w3images/mist.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[280px] sm:h-[230px]  bg-violet-500">  <img className='img'  src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> </div>
+            </div>
 
+            <div className="column"> 
+         <div  className=" w-full h-[320px]  bg-red-400"> <img className='img' src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[280px]   bg-yellow-300"><img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[250px] bg-blue-400 "> <img className='img' src="https://www.w3schools.com/w3images/ocean.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[240px]  bg-slate-300 "> <img className='img' src="https://www.w3schools.com/w3images/mountainskies.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[250px]  bg-slate-500"> <img className='img' src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[350px]   bg-green-400"> <img className='img' src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[230px]  bg-violet-500"> <img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /></div>
 
             </div>
 
             <div className="column">
-            <img src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/ocean.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /> 
+            <div  className=" w-full h-[220px]  bg-red-400">  <img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[460px] bg-blue-400 ">  <img className='img' src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[230px]  bg-slate-300 ">  <img className='img' src="https://www.w3schools.com/w3images/falls2.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[280px]  bg-slate-500">  <img  className='img' src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[350px]   bg-green-400">  <img className='img' src="https://www.w3schools.com/w3images/nature.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[260px]   bg-yellow-300">  <img className='img'  src="https://www.w3schools.com/w3images/mist.jpg" style={{ width: "100%" }} /> </div>
+              <div className=" w-full h-[230px]  bg-violet-500">  <img className='img'  src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> </div>
 
             </div>
 
             <div className="column">
-            <img src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/falls2.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/nature.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/mist.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/paris.jpg" style={{ width: "100%" }} /> 
-
-            </div>
-
-            <div className="column">
-            <img src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/ocean.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /> 
-            <img src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /> 
+            <div  className=" w-full h-[320px]  bg-red-400"> <img className='img' src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[280px]   bg-yellow-300"><img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[250px] bg-blue-400 "> <img className='img' src="https://www.w3schools.com/w3images/ocean.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[240px]  bg-slate-300 "> <img className='img' src="https://www.w3schools.com/w3images/mountainskies.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[250px]  bg-slate-500"> <img className='img' src="https://www.w3schools.com/w3images/rocks.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[350px]   bg-green-400"> <img className='img' src="https://www.w3schools.com/w3images/underwater.jpg" style={{ width: "100%" }} /></div>
+              <div className=" w-full h-[230px]  bg-violet-500"> <img className='img' src="https://www.w3schools.com/w3images/wedding.jpg" style={{ width: "100%" }} /></div>
             </div>
           </div>
         </section>
