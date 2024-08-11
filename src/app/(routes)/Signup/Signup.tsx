@@ -2,11 +2,26 @@
 
 import React, { useState } from 'react';
 import Header from '../../Components/Header/Header';
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+
+interface IFormInput {
+  userName: string;
+  email: string,
+  password: string,
+  href:string
+
+}
+
+
+
 
 function Signup() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log(data);
+  };
+
 
   return (
     <>
@@ -50,7 +65,8 @@ function Signup() {
                   <button type='submit' className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Signup</button>
             </form>
             <div className="py-1">
-              <p className=' text-black text-xs text-center '>Already have an account ? <span href='/login'> <button className=' text-blue-500 px-2 hover:underline'>Login</button></span></p>
+              <p className=' text-black text-xs text-center '>Already have an account ? <a  className=' inline-block text-blue-500 px-2 hover:underline' href="/login"> Login</a> </p>
+              
             </div>
             <button type='submit' className=' flex justify-center items-center bg-black text-white w-full py-3 my-4 font-semibold text-xs  rounded-lg '>
               <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" className='h-5 inline-block  ' alt="" /> <p className='inline px-2'>Sign in with Google</p></button>
