@@ -5,6 +5,10 @@ import Header from '../../Components/Header/Header';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 
+
+import { useToast } from "@/components/ui/use-toast"
+import { Button } from "@/components/ui/button"
+
 interface IFormInput {
   userName: string;
   email: string,
@@ -17,10 +21,24 @@ interface IFormInput {
 
 
 function Signup() {
+
+  const { toast } = useToast()
+
   const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
+
+  
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
+    if (data.userName && data.email && data.password) {
+      toast({
+        title: "Your account is created successfully ",
+        description: "Enjoy your journey 😊 ",
+        duration: 5000,
+        className: " border-green-500 "
+      })
+    }
   };
+
+
 
 
   return (
@@ -48,6 +66,7 @@ function Signup() {
                   className={`w-full py-3 mt-3 text-xs px-2 rounded-md ${errors.email ? "border-2 border-red-500" : "border-none"} focus:outline-none focus:ring-0`} 
 
                   type="text" 
+                  
                   placeholder="Email" 
                   {...register("email", { required: "Email is required", pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }})} 
                 />
@@ -62,15 +81,16 @@ function Signup() {
                 />
                       {errors.password && <p className=' text-[11px]  text-red-500 pt-2 px-2 '>{errors.password.message}</p>}
        
-                  <button type='submit' className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Signup</button>
+                  <button type='submit'  className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Signup</button>
             </form>
             <div className="py-1">
               <p className=' text-black text-xs text-center '>Already have an account ? <a  className=' inline-block text-blue-500 px-2 hover:underline' href="/login"> Login</a> </p>
               
             </div>
-            <button type='submit' className=' flex justify-center items-center bg-black text-white w-full py-3 my-4 font-semibold text-xs  rounded-lg '>
+            <button type='submit'  
+        className=' flex justify-center items-center bg-black text-white w-full py-3 my-4 font-semibold text-xs  rounded-lg '>
               <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" className='h-5 inline-block  ' alt="" /> <p className='inline px-2'>Sign in with Google</p></button>
-
+            
             </div>
           </div>
         </div>

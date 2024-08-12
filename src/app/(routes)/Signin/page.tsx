@@ -1,12 +1,10 @@
 import React from 'react'
-import Signup from './Signup'
-
+import SignIn from './Signin'
 
 function page() {
   return (
     <>
-   
-    <Signup/>
+    <SignIn/>
     </>
   )
 }
