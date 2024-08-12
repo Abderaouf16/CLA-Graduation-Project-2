@@ -30,7 +30,7 @@ function Signup() {
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     if (data.userName && data.email && data.password) {
       toast({
-        title: "Your account is created successfully ",
+        title: "Your account is created successfully ✅",
         description: "Enjoy your journey 😊 ",
         duration: 5000,
         className: " border-green-500 "
@@ -81,7 +81,7 @@ function Signup() {
                 />
                       {errors.password && <p className=' text-[11px]  text-red-500 pt-2 px-2 '>{errors.password.message}</p>}
        
-                  <button type='submit'  className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Signup</button>
+                  <button type='submit'  className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Sign up</button>
             </form>
             <div className="py-1">
               <p className=' text-black text-xs text-center '>Already have an account ? <a  className=' inline-block text-blue-500 px-2 hover:underline' href="/login"> Login</a> </p>
