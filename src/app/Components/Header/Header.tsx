@@ -11,6 +11,7 @@ import homeDesign from "../../../../public/home-design.jpg";
 import commercial from "../../../../public/offices.jpg";
 import bars from "../../../../public/bars-solid.svg";
 import "./Header.css";
+import magnifyingIcon from './../../../../public/magnifying.svg' 
 
 import {
   NavigationMenu,
@@ -92,7 +93,9 @@ function Header() {
     <>
       <nav className="  fixed top-0 right-0 left-0 z-50   flex justify-between items-center px-4 md:px-6 xl:px-14 py-5 bg-white  ">
         <div className="  flex items-center justify-center">
-          <p className="roboto-bold text-lg md:text-xl font-medium ">ArchiVision</p>
+          <Link href="/Home" className="roboto-bold text-lg md:text-xl font-medium cursor-pointer ">
+          ArchiVision
+              </Link>
           <div className=" ml-6  md:ml-16">
             <NavigationMenu className="discover">
               <NavigationMenuList>
@@ -162,11 +165,17 @@ function Header() {
         </div>
 
         <div className="flex items-center justify-center space-x-4  ">
+          <div className="flex justify-between bg-[#EBEBEB]  items-center rounded-xl px-4    ">
+            
           <Input
             type="text"
             placeholder="Search for projects.."
-            className=" text-xs md:text-[13px] rounded-xl bg-[#EBEBEB] border-none text-black  no-focus-border"
+            className=" text-xs md:text-[13px]  bg-[#EBEBEB] border-none text-black  no-focus-border pl-0  pr-10"
           />
+          
+          <img src={magnifyingIcon.src} alt="magnifyingIcon" 
+            className='h-4  cursor-pointer ' />
+          </div>
           <div
             className={`${
               isMobileMenuOpen ? "mobileView" : ""
@@ -176,12 +185,12 @@ function Header() {
               className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
               asChild
             >
-              <Link href="/login" className="font-semibold text-[13px] ">
+              <Link href="/Signup" className="font-semibold text-[13px] ">
                 Sign Up
               </Link>
             </Button>
             <Button className="px-8  rounded-xl " asChild>
-              <Link href="/login" className="font-semibold text-[13px] ">
+              <Link href="/Signin" className="font-semibold text-[13px] ">
                 Sign In
               </Link>
             </Button>
@@ -192,7 +201,7 @@ function Header() {
                 <img
                   src="/bars-solid.svg"
                   className="w-7 cursor-pointer "
-                  onClick={toggleMobileMenu}
+                  onClick={toggleMobileMenu.src}
                   alt=""
                 />
               </SheetTrigger>
@@ -206,7 +215,7 @@ function Header() {
                         asChild
                       >
                         <Link
-                          href="/login"
+                          href="/Signup"
                           className="font-semibold text-[13px] "
                         >
                           Sign Up
@@ -214,7 +223,7 @@ function Header() {
                       </Button>
                       <Button className="px-8  rounded-xl " asChild>
                         <Link
-                          href="/login"
+                          href="/Signin"
                           className="font-semibold text-[13px] "
                         >
                           Sign In

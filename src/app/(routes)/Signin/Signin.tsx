@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Header from '../../Components/Header/Header';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import Link from "next/link";
 
 
 
@@ -73,7 +74,14 @@ function Signup() {
                   <button type='submit'  className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Sign in</button>
             </form>
             <div className="py-1">
-              <p className=' text-black text-xs text-center '>Don't' have an account ? <a  className=' inline-block text-blue-500 px-2 hover:underline' href="/login"> Sign up</a> </p>
+              <p className=' text-black text-xs text-center '>Don't' have an account ? 
+              <Link
+                          href="/Signup"
+                          className="inline-block text-blue-500 px-2 hover:underline "
+                        >
+                          Sign Up
+                        </Link>
+                         </p>
               
             </div>
             <button type='submit'  
