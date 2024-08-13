@@ -201,7 +201,7 @@ function Header() {
                 <img
                   src="/bars-solid.svg"
                   className="w-7 cursor-pointer "
-                  onClick={toggleMobileMenu.src}
+                  onClick={toggleMobileMenu}
                   alt=""
                 />
               </SheetTrigger>
