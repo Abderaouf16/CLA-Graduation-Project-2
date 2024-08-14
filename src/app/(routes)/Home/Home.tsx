@@ -26,6 +26,8 @@ function Page() {
     "Residental",
   ];
 
+
+
   return (
     <>
       <Header />
