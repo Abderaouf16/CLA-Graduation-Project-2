@@ -185,13 +185,13 @@ function Header() {
               className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
               asChild
             >
-              <Link href="/Signup" className="font-semibold text-[13px] ">
-                Sign Up
+              <Link href="/Signin" className="font-semibold text-[13px] ">
+                Sign In
               </Link>
             </Button>
             <Button className="px-8  rounded-xl " asChild>
-              <Link href="/Signin" className="font-semibold text-[13px] ">
-                Sign In
+              <Link href="/Signup" className="font-semibold text-[13px] ">
+                Sign Up 
               </Link>
             </Button>
           </div>

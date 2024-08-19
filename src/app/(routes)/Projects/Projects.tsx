@@ -75,7 +75,7 @@ function Projects() {
           </div>
 
           <div className="flex">
-            <Menubar className="rounded-xl border-2 border-[#EBEBEB] cursor-pointer">
+            <Menubar className="rounded-xl border-2 border-[#EBEBEB] cursor-pointer my-2">
               <MenubarMenu>
                 <MenubarTrigger className="cursor-pointer">
                   <Image
@@ -103,7 +103,7 @@ function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-red-200  h-[300px]   flex flex-col rounded-xl "
+              className="  h-[300px] shadow-lg  flex flex-col rounded-xl "
             >
               <img
                 className=" bg-contain  bg-center h-[80%] rounded-xl"
@@ -111,7 +111,7 @@ function Projects() {
                 alt={project.title}
               />
               <div className="p-2  flex ">
-                <div className=" bg-blue-200 flex-1">
+                <div className="  flex-1">
                   <h1 className=" font-medium text-md">{project.title}</h1>
                   <p className="font-normal text-sm">ffffffffff</p>
                 </div>
