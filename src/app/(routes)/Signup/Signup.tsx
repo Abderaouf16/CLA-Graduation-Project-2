@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Link from "next/link";
-import { signupLogic } from "./../Signin/actions.ts";
+import { signupLogic } from "./actions";
 
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";

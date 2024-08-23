@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Header from '../../Components/Header/Header';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import Link from "next/link";
-import login from './actions.ts'
 
 
 import { useToast } from "@/components/ui/use-toast"
@@ -71,7 +70,7 @@ function Signin() {
                 />
                       {errors.password && <p className=' text-[11px]  text-red-500 pt-2 px-2 '>{errors.password.message}</p>}
        
-                  <button type='submit' formAction={login} className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Sign in</button>
+                  <button type='submit'  className='bg-black text-white w-full py-3 mt-8 mb-4 font-semibold text-sm  rounded-md'>Sign in</button>
             </form>
             <div className="py-1">
               <p className=' text-black text-xs text-center '>Don't' have an account ? 

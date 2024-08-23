@@ -25,9 +25,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
-import {
-  Select,
-  SelectContent,
+import { Select,SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -70,6 +68,11 @@ const ListItem: React.FC<ListItemProps> = ({
     </a>
   </li>
 );
+
+
+import CheckAuth from './../CheckAuth/CheckAuth'
+
+
 
 function Header() {
   const [currentImage, setCurrentImage] = useState<string>(interieur.src);
