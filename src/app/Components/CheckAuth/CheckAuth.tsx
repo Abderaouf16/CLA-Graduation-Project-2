@@ -5,24 +5,17 @@ import { createClient } from './../../../../utils/supabase/server.ts'
 export default async function CheckAuth() {
   const supabase = createClient()
 
+
+  const supabase = createClient()
+
+  const { data, error } = await supabase.auth.getUser()
+  if (data.user) {
+    console.log('user exists')
+  }else{
+    'user does not exists'
+  }
+
   
 
   // Function to check if the user is authenticated
-
-  const { data: { session }, error } = await supabase.auth.getSession()
-
-  if (session) {
-    
-    console.log('User is authenticated:', session.user)
-    return <p>user is authenticated:</p>
-      
-  } else {
-      console.log('User is not authenticated')
-      return <p>user is not authenticated:</p>
-
-
-  }
-
-
-
 }

@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 
 import { createClient } from './../../../../utils/supabase/server'
 
-export async function login(formData: FormData) {
+export  async function loginLogic(formData: FormData) {
   const supabase = createClient()
 
   // type-casting here for convenience
@@ -14,14 +14,14 @@ export async function login(formData: FormData) {
     email: formData.get('email') as string,
     password: formData.get('password') as string,
   }
-
   const { error } = await supabase.auth.signInWithPassword(data)
 
   if (error) {
-    redirect('/error')
-  }
+return {error : error.message} 
+ } 
+ return {
+  success : "You are successfully Logged in ✅"
+ }
 
-  revalidatePath('/', 'layout')
-  redirect('/')
 }
 

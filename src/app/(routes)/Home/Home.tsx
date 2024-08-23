@@ -15,7 +15,9 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 
-function Page() {
+function Home() {
+
+
   // Filters
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const buttons = [
