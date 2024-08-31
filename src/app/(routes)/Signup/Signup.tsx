@@ -60,7 +60,6 @@ function Signup() {
 
   return (
     <>
-      <Header />
       <div className="px-4 md:px-6 xl:px-14 py-16  w-full h-screen flex justify-center items-center">
         <div className="bg-[#EBEBEB] w-[550px]  mt-[80px] rounded-3xl">
           <div className=" w-[80%] sm:w-[50%] m-auto h-full ">

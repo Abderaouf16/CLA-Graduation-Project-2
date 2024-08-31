@@ -1,21 +1,12 @@
-import { redirect } from 'next/navigation'
-
+'use server'
 import { createClient } from './../../../../utils/supabase/server.ts'
-
-export default async function CheckAuth() {
-  const supabase = createClient()
-
-
+ 
+export default async function checkAuth() {
+  
   const supabase = createClient()
 
   const { data, error } = await supabase.auth.getUser()
-  if (data.user) {
-    console.log('user exists')
-  }else{
-    'user does not exists'
-  }
+ 
+  return {data, error}
 
-  
-
-  // Function to check if the user is authenticated
 }

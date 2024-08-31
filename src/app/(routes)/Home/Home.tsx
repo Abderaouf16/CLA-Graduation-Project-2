@@ -5,6 +5,9 @@ import Header from "../../Components/Header/Header";
 import "./Home.css";
 import Image from "next/image";
 
+
+
+
 import {
   Menubar,
   MenubarContent,
@@ -14,6 +17,15 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+
+
+
+
+
+
+
+
+
 
 function Home() {
 
@@ -159,4 +171,4 @@ function Home() {
   );
 }
 
-export default Page;
+export default Home;

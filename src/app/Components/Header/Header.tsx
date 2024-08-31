@@ -12,7 +12,7 @@ import commercial from "../../../../public/offices.jpg";
 import bars from "../../../../public/bars-solid.svg";
 import "./Header.css";
 import magnifyingIcon from './../../../../public/magnifying.svg' 
-
+import SignBtns from './../CheckAuth/authCon'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -70,7 +70,6 @@ const ListItem: React.FC<ListItemProps> = ({
 );
 
 
-import CheckAuth from './../CheckAuth/CheckAuth'
 
 
 
@@ -184,19 +183,7 @@ function Header() {
               isMobileMenuOpen ? "mobileView" : ""
             } memberShip flex justify-center items-center  `}
           >
-            <Button
-              className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
-              asChild
-            >
-              <Link href="/Signin" className="font-semibold text-[13px] ">
-                Sign In
-              </Link>
-            </Button>
-            <Button className="px-8  rounded-xl " asChild>
-              <Link href="/Signup" className="font-semibold text-[13px] ">
-                Sign Up 
-              </Link>
-            </Button>
+            <SignBtns/>
           </div>
           <div className="humberger  flex justify-center items-center   cursor-pointer">
             <Sheet >
@@ -212,7 +199,7 @@ function Header() {
                 <SheetHeader>
                   <SheetTitle></SheetTitle>
                   <SheetDescription>
-                    <div className="mt-7">
+                   {/*  <div className="mt-7">
                       <Button
                         className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
                         asChild
@@ -232,7 +219,7 @@ function Header() {
                           Sign In
                         </Link>
                       </Button>
-                    </div>
+                    </div> */}
 
                     <div className="">
                       
