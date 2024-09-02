@@ -30,6 +30,7 @@
     "react-animated-heart": "^0.0.8",
     "react-dom": "^18",
     "react-hook-form": "^7.52.2",
+    "react-loading-indicators": "^1.0.0",
     "react-sc": "^0.2.1",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.4.0",

@@ -12,7 +12,7 @@ import commercial from "../../../../public/offices.jpg";
 import bars from "../../../../public/bars-solid.svg";
 import "./Header.css";
 import magnifyingIcon from './../../../../public/magnifying.svg' 
-import SignBtns from './../CheckAuth/authCon'
+import SignBtns from './../CheckAuth/AuthHeader'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -166,13 +166,13 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center space-x-4  ">
+        <div className="flex items-center justify-between space-x-4  ">
           <div className="flex justify-between bg-[#EBEBEB]  items-center rounded-xl px-4    ">
             
           <Input
             type="text"
             placeholder="Search for projects.."
-            className=" text-xs md:text-[13px]  bg-[#EBEBEB] border-none text-black  no-focus-border pl-0  pr-10"
+            className=" text-xs md:text-[13px]  bg-[#EBEBEB] border-none text-black  no-focus-border pl-0  md:pr-10"
           />
           
           <img src={magnifyingIcon.src} alt="magnifyingIcon" 
@@ -185,12 +185,12 @@ function Header() {
           >
             <SignBtns/>
           </div>
-          <div className="humberger  flex justify-center items-center   cursor-pointer">
+          <div className="humberger flex-shrink-0   flex justify-between items-center   cursor-pointer">
             <Sheet >
               <SheetTrigger className="   p-2 border-[#EBEBEB] border-2 rounded-xl   hover:bg-[#EBEBEB]">
                 <img
                   src="/bars-solid.svg"
-                  className="w-7 cursor-pointer "
+                  className="w-5 h-5 cursor-pointer "
                   onClick={toggleMobileMenu}
                   alt=""
                 />
@@ -199,31 +199,7 @@ function Header() {
                 <SheetHeader>
                   <SheetTitle></SheetTitle>
                   <SheetDescription>
-                   {/*  <div className="mt-7">
-                      <Button
-                        className=" px-8  ml-5 mr-2 border-[#EBEBEB] border-2 text-black rounded-xl  bg-transparent hover:bg-[#EBEBEB]"
-                        asChild
-                      >
-                        <Link
-                          href="/Signup"
-                          className="font-semibold text-[13px] "
-                        >
-                          Sign Up
-                        </Link>
-                      </Button>
-                      <Button className="px-8  rounded-xl " asChild>
-                        <Link
-                          href="/Signin"
-                          className="font-semibold text-[13px] "
-                        >
-                          Sign In
-                        </Link>
-                      </Button>
-                    </div> */}
-
-                    <div className="">
-                      
-                    </div>
+                  <SignBtns/>
                   </SheetDescription>
                 </SheetHeader>
               </SheetContent>

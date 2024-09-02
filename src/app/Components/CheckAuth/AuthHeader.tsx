@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useAuth } from "./../../Context/AuthContext";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ThreeDot } from "react-loading-indicators";
 
-export default function SignBtns() {
+function SignBtns() {
   const [loading, setLoading] = useState(true);
   const result = useAuth();
 
@@ -15,25 +16,16 @@ export default function SignBtns() {
 
   if (loading) {
     return (
-      <>
-        <div
-          className="inline-block h-8 w-8 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-current align-[-0.125em] text-surface dark:text-white"
-          role="status"
-        >
-          <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Loading...
-          </span>
-        </div>
-      </>
-    ); // You can customize this with a spinner or a better loading indicator.
+      <div className="">
+        <ThreeDot variant="pulsate" color="#31a3cc" size="small" text="" textColor="" />
+      </div>
+    );
   }
 
   if (result) {
     console.log("can work");
     return (
-      <>
-        <h1>Logged in</h1>
-      </>
+      <h1>Logged in</h1>
     );
   } else {
     console.log("can't work");
@@ -56,3 +48,5 @@ export default function SignBtns() {
     );
   }
 }
+
+export default React.memo(SignBtns);

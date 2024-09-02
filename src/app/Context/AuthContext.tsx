@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useMemo } from "react";
 import checkAuth from './../Components/CheckAuth/CheckAuth';
 
 const AuthContext = createContext(null);
@@ -23,6 +23,7 @@ export function AuthProvider({ children }) {
         } else {
           // Persist user state in localStorage
           localStorage.setItem('user', JSON.stringify(result.data.user.role));
+          setUser(result.data.user.role)
         }
       } catch (error) {
         console.log(error);
@@ -31,10 +32,10 @@ export function AuthProvider({ children }) {
 
     // Fetch the current auth state
     fetchAuth();
-  }, []);
+  }, [user]);
 
-  console.log(user);
-
+  const memoizedUser = useMemo(() => user, [user]);
+  
   return (
     <AuthContext.Provider value={user}>
       {children}

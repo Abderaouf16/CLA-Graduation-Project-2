@@ -8,6 +8,7 @@ import {loginLogic} from "./actions.ts";
 import { useRouter } from 'next/router';
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
+import {useAuth} from './../../Context/AuthContext'
 
 interface IFormInput {
   userName: string;
@@ -51,6 +52,7 @@ function Signin() {
         });
         setTimeout(() => {
           window.location.href = "/Home";
+          
         }, 3000);
         
       }

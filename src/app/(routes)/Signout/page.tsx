@@ -13,7 +13,6 @@ export default function LogoutButton() {
       // Remove user from localStorage
       localStorage.removeItem('user');
       console.log('User removed from localStorage');
-      router.reload();
     } else {
       console.error('Error logging out:', response.error);
     }
